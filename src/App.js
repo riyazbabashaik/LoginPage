@@ -1,6 +1,5 @@
 import React from 'react';
-import LoginCompRaul from './LoginCompRaul';
-import HrView from './HrView';
+import Logincomponent from './Logincomponent';
 import Home from './Home';
 import { BrowserRouter , Routes, Route} from "react-router-dom";
 import PrivateRoutes from './PrivateRoutes';
@@ -11,9 +10,8 @@ function App() {
      <Routes>
         <Route element={<PrivateRoutes/>}>
           <Route element={<Home/>} path='/' exact/>
-          <Route element={<HrView/>}  path='/hr' exact/>
         </Route>
-        <Route element={<LoginCompRaul />} path='/login' />
+        <Route element={<Logincomponent />} path='/login' />
     </Routes>
     </BrowserRouter>
   );

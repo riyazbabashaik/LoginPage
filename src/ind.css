@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  font-family: "Arial";
+}
+.navbar {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 4px solid #4d8ae6;
+  
+}
+.home{
+  margin-top: 200px;
+} 
+.logheader{
+  padding: 24px;
+  height: 70px;
+  font-family:'Times New Roman', Times, serif;
+}
+.nav{
+  display: flex;
+  height: 80px;
+}
+.pagename{
+  font-family:'Times New Roman', Times, serif;
+  flex:1;
+  justify-content:space-between;
+}
+
+
+
+ .head {
+  align-self: center;
+  text-align: center;
+  color: black;
+  
+}
+
+ .container {
+  justify-content:center;
+  align-items: center;
+  box-shadow:0.2px 0.2px 3px 2px rgba(0,0,0,0.15);
+  width: 310px;
+  height: 380px;
+  margin:100px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color:rgb(249, 250, 252)
+}  
+.sub{
+   margin-top: 30px;
+   margin-left: 40px;
+}
+
+ .header {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 90px;
+  margin-right: 50px; 
+  justify-content:center;
+  align-items:center;
+  font-size: 32px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.input .txtfld{
+  margin-top: 4px;
+  margin-bottom: 8px;
+  
+} 
+.btn {
+  margin-left: 15px; 
+  margin-top: 20px;
+}
+ .input{
+  margin-top: 15px;
+} 
+.error{
+  color: red;
+  margin: 20px;
+  text-align: center;
+}

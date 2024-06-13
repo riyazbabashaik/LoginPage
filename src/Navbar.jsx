@@ -1,7 +1,8 @@
 import React from 'react'
-import { RaulAvatar } from "@realpage/react-raul";
+import Button from '@mui/material/Button';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
-const Navbar = ({pageName}) => {
+const Navbar = ({ pageName }) => {
     const handleLogout = () => {
         if (sessionStorage.getItem('user-info')) {
             sessionStorage.clear();
@@ -10,16 +11,18 @@ const Navbar = ({pageName}) => {
     };
 
     return (
-        <div style={{ borderBottom: '4px solid #FF5F1F', alignItems: "center",  boxShadow: '0.2px 0.2px 3px 2px #FF5F1F'}} className=" r-flex ">
-                        <div className="r-flex-1 r-p-3 r-m-2 ">
-                            <a href="./" className="r-icon-xl"><raul-icon icon="arrow-left-1"></raul-icon></a>
+        <div className='nav' style={{ display: 'flex', borderBottom: '4px solid #4d8ae6', alignItems: "center", boxShadow: '0.2px 0.2px 3px 2px #4d8ae6' }} >
+            <div className='pagename'>
+                <h1 style={{ textAlign: 'center', fontSize:'32px', marginLeft:'120px'}}>{pageName}</h1>
                         </div>
-                        <div className="r-flex-auto  r-p-3 r-m-2 head r-justify-center r-heading-xl">
-                            <h1 style={{ textAlign: 'center' }}>{pageName}</h1>
+            <div className='profile'>
+                <h1> {(sessionStorage.getItem('user-info'))}</h1>
                         </div>
-                        <div style={{ display: 'flex', justifyContent: 'flex-end' }} className=" r-flex-1  r-text-xl   r-p-3 r-m-2 details">
-                            <h2 >{(sessionStorage.getItem('user-info'))} <RaulAvatar /></h2>
-                            <button style={{backgroundColor:'#FF5F1F', color:'white', borderRadius: '4px', fontSize:'17px' }} className='r-ml-4 r-px-2 r-h-8 r-w-24 r-mt-1' type="submit" onClick={handleLogout} >Log Out </button>
+            <div>
+                <AccountCircleIcon fontSize="large" color="primary"/>
+            </div>
+            <div>
+                <Button onClick={handleLogout} className='btn' sx={{ width: '100px', backgroundColor: "#1976d2" }} disableElevation size='large' variant="contained" type="submit" >Log Out</Button>
                         </div>
         </div>
     );
